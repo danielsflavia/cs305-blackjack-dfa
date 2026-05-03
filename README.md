@@ -77,7 +77,6 @@ cs305-blackjack-dfa/
 ├── deck.js             ← Deck generation and card value logic
 ├── game.js             ← Game flow and betting rules
 ├── ui.js               ← Rendering, display, and DFA UI updates
-├── script.js           ← Main initialization / module entry point
 ├── README.md           ← This file
 ├── docs/
 │   └── CS305_Project_DanielsNolan.md  ← Project report
