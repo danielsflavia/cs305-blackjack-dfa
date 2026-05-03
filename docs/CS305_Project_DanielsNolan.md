@@ -69,11 +69,19 @@ python3 -m http.server 8080
 
 ## Screenshots
 
-1. **Game start:** shows the initial `IDLE` state and empty bet.
-2. **Player turn:** shows `PLAYER_TURN` after clicking Deal.
-3. **End state:** shows `WIN`, `LOSE`, or `PUSH` after resolution.
+![Game start](screenshots/start.png)
 
-*Screenshots are not included yet; add them before final PDF submission if possible.*
+*Game start: initial `IDLE` state and empty bet.*
+
+![Player turn](screenshots/player-turn.png)
+
+*Player turn: `PLAYER_TURN` after clicking Deal.*
+
+![End state](screenshots/end-state.png)
+
+*End state: final result shown as `WIN`, `LOSE`, or `PUSH`.*
+
+> Place your screenshot files in `docs/screenshots/` using the names above before exporting to PDF.
 
 ---
 
