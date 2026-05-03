@@ -8,6 +8,10 @@
 - Flavia Daniels, s1365459
 - Trevor Nolan, s1355810
 
+**Roles:**
+- Flavia Daniels: blackjack game mechanics, DFA transition implementation, rule logic, and gameplay testing.
+- Trevor Nolan: UI design, DFA visualization, report authoring, README updates, and frontend polish.
+
 ---
 
 ## Topic
