@@ -49,50 +49,20 @@ Formally defined as a 5-tuple **M = (Q, Σ, δ, q0, F)**:
 
 This is a **zero-dependency web app** built from modular HTML, CSS, and JavaScript files. No install, no build step.
 
-### Option 1 — Just open the file (simplest)
+### Basic option — run it the way you used before
 ```bash
 # Clone the repo
 git clone https://github.com/danielsflavia/cs305-blackjack-dfa.git
 cd cs305-blackjack-dfa
 
-# Open directly in your browser
-open index.html          # macOS
-start index.html         # Windows
-xdg-open index.html      # Linux
-```
-
-### Option 2 — VS Code Live Server (recommended for development)
-```bash
-# 1. Clone and open in VS Code
-git clone https://github.com/danielsflavia/cs305-blackjack-dfa.git
-cd cs305-blackjack-dfa
-code .
-
-# 2. Install the Live Server extension in VS Code:
-#    Extensions panel → search "Live Server" → Install (by Ritwick Dey)
-
-# 3. Right-click index.html → "Open with Live Server"
-#    Game opens at http://127.0.0.1:5500
-```
-
-### Option 3 — Python local server
-```bash
-git clone https://github.com/danielsflavia/cs305-blackjack-dfa.git
-cd cs305-blackjack-dfa
-
-# Python 3
+# Start a local Python server
 python3 -m http.server 8080
-
-# Then open: http://localhost:8080
 ```
 
-### Option 4 — Node.js local server
-```bash
-git clone https://github.com/danielsflavia/cs305-blackjack-dfa.git
-cd cs305-blackjack-dfa
+Then open this URL in your browser:
 
-npx serve .
-# Then open the URL it prints (usually http://localhost:3000)
+```
+http://localhost:8080
 ```
 
 ---
@@ -109,7 +79,8 @@ cs305-blackjack-dfa/
 ├── ui.js               ← Rendering, display, and DFA UI updates
 ├── script.js           ← Main initialization / module entry point
 ├── README.md           ← This file
-├── index_old.html      ← Backup of the original single-file version
+├── docs/
+│   └── CS305_Project_DanielsNolan.md  ← Project report
 ```
 
 ---

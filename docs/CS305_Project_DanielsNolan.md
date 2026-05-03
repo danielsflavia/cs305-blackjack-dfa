@@ -5,8 +5,8 @@
 **Project Title:** Blackjack DFA
 
 **Team Members:**
-- Flavia Daniels, Student ID: s1365459
-- Trevor Nolan, Student ID: s1355810
+- Flavia Daniels, s1365459
+- Trevor Nolan, s1355810
 
 ---
 
@@ -52,7 +52,7 @@ A browser-based Blackjack game where the game logic is implemented as a determin
 git clone https://github.com/danielsflavia/cs305-blackjack-dfa.git
 cd cs305-blackjack-dfa
 ```
-2. Open `index.html` directly in a browser, or run a local server:
+2. Run a local server:
 ```bash
 python3 -m http.server 8080
 ```
@@ -81,11 +81,10 @@ python3 -m http.server 8080
 
 *End state: final result shown as `WIN`, `LOSE`, or `PUSH`.*
 
-> Place your screenshot files in `docs/screenshots/` using the names above before exporting to PDF.
 
 ---
 
-## What You Learned
+## What We Learned
 
 Building this project taught us:
 - How to model interactive game flow as a deterministic finite automaton.
@@ -96,10 +95,4 @@ Building this project taught us:
 **Challenges:**
 - Ensuring the DFA model matched the game flow exactly.
 - Keeping the user interface synchronized with state changes.
-- Making the app both playable and educational at the same time.
-
----
-
-## GitHub Link
-
-https://github.com/danielsflavia/cs305-blackjack-dfa
+- Making the app both playable and educational at the same time (including Diagram).
