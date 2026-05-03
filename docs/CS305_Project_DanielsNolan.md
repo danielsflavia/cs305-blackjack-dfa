@@ -73,11 +73,11 @@ python3 -m http.server 8080
 
 *Game start: initial `IDLE` state and empty bet.*
 
-![Player turn](screenshots/player-turn.png)
+![Player turn](screenshots/lose-end-state.png)
 
-*Player turn: `PLAYER_TURN` after clicking Deal.*
+*Player turn: `PLAYER_TURN` after clicking Dea and lost the game.*
 
-![End state](screenshots/end-state.png)
+![End state](screenshots/win-end-state.png)
 
 *End state: final result shown as `WIN`, `LOSE`, or `PUSH`.*
 
