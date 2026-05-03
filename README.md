@@ -47,7 +47,7 @@ Formally defined as a 5-tuple **M = (Q, Σ, δ, q0, F)**:
 
 ## How to Run
 
-This is a **zero-dependency, single-file web app**. No install, no build step.
+This is a **zero-dependency web app** built from modular HTML, CSS, and JavaScript files. No install, no build step.
 
 ### Option 1 — Just open the file (simplest)
 ```bash
@@ -101,8 +101,15 @@ npx serve .
 
 ```
 cs305-blackjack-dfa/
-├── index.html          ← Entire game (HTML + CSS + JS, self-contained)
+├── index.html          ← Main HTML file
+├── style.css           ← Project styling
+├── dfa.js              ← DFA state machine and transition logic
+├── deck.js             ← Deck generation and card value logic
+├── game.js             ← Game flow and betting rules
+├── ui.js               ← Rendering, display, and DFA UI updates
+├── script.js           ← Main initialization / module entry point
 ├── README.md           ← This file
+├── index_old.html      ← Backup of the original single-file version
 ```
 
 ---
