@@ -240,5 +240,50 @@ button#btn-clear-bet { width: 100%; padding: 6px; font-size: 0.7rem; margin-top:
   #game-wrap { flex-direction: column; }
   #sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; }
   #balance-panel, #log-panel { flex: 1; }
-}</content>
-<parameter name="filePath">/Users/flaviadaniels/Desktop/cs305-blackjack-dfa/style.css
+}
+
+/* ─── DFA STATE GLOW ──────────────────────────────────────────── */
+
+/* Pulse animation for the active state node */
+@keyframes dfa-glow-pulse {
+  0%   { filter: drop-shadow(0 0 4px currentColor) drop-shadow(0 0 8px currentColor); }
+  50%  { filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 20px currentColor); }
+  100% { filter: drop-shadow(0 0 4px currentColor) drop-shadow(0 0 8px currentColor); }
+}
+
+svg#dfa-svg g.dfa-state-active {
+  animation: dfa-glow-pulse 1s ease-in-out infinite;
+}
+
+/* Slightly brighten the rect stroke inside the active node */
+svg#dfa-svg g.dfa-state-active rect:first-child {
+  stroke-width: 2.5;
+  opacity: 1;
+}
+
+/* ─── TRANSITION LOG — more visible entries ───────────────────── */
+
+/* Slide + fade in each new log entry */
+@keyframes log-entry-in {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+#log-list span {
+  animation: log-entry-in 0.25s ease;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Non-terminal transitions — slightly brighter than before */
+#log-list span:not(.highlight) {
+  color: #c8d8cf;
+}
+
+/* Terminal (accepting state) transitions — bold gold with background */
+#log-list span.highlight {
+  color: #0e1f14;
+  background: var(--gold2);
+  font-weight: 500;
+  padding: 2px 6px;
+}
