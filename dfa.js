@@ -200,6 +200,7 @@ const STATE_POS = {
 };
 
 function updateDFADisplay(state) {
+  state = state?.trim?.();
   const pos = STATE_POS[state];
   if (!pos) return;
 
