@@ -125,23 +125,18 @@ function gameStand() {
 /*
  * endRound() — cleanup after the DFA reaches any accepting state in F.
  *
- * THE CRITICAL FIX IS HERE: dfa.reset() returns the machine to q0.
- *
- * Without dfa.reset(), the machine stays in WIN / LOSE / PUSH.
- * addBet() guards with (dfa.q !== STATES.IDLE) — so every chip click
- * is silently blocked, and the player can never bet again.
- *
- * With dfa.reset(), q returns to IDLE, chips work, and the player
- * can start a new round normally.
+ * NOTE: dfa.reset() is intentionally NOT called here.
+ * The DFA must remain in WIN / LOSE / PUSH so the SVG diagram
+ * shows the terminal state after each round. The reset happens
+ * at the top of gameDeal() before consuming the next DEAL symbol,
+ * which is the correct place — the machine returns to q0 only when
+ * the player actively starts a new round.
  */
 function endRound() {
   balance = Math.max(0, balance);
   bet     = 0;
   updateBalanceDisplay();
   setButtons(true, false, false);  // re-enable Deal, disable Hit + Stand
-
-  // ← THE FIX: reset DFA to q0 so betting is unblocked for the next round
-  dfa.reset();
 }
 
 /* ─── 6. BETTING ────────────────────────────────────────────────── */
